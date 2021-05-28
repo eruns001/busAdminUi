@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.busadminui.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentAc"
+            app:destination="@id/fragmentAc" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentDisplayBeam"
+            app:destination="@id/fragmentDisplayBeam" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentLight"
+            app:destination="@id/fragmentLight" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentTable"
+            app:destination="@id/fragmentTable" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragmentDisplayRoof"
+            app:destination="@id/fragmentDisplayRoof" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAc"
+        android:name="com.example.busadminui.FragmentAc"
+        android:label="FragmentAc"
+        tools:layout="@layout/fragment_ac">
+        <action
+            android:id="@+id/action_fragmentAc_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_fragmentAc_to_fragmentDisplayBeam"
+            app:destination="@id/fragmentDisplayBeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDisplayBeam"
+        android:name="com.example.busadminui.FragmentDisplayBeam"
+        android:label="FragmentDisplayBeam"
+        tools:layout="@layout/fragment_display_beamtype">
+        <action
+            android:id="@+id/action_fragmentDisplayBeam_to_fragmentAc"
+            app:destination="@id/fragmentAc" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDisplayRoof"
+        android:name="com.example.busadminui.FragmentDisplayRoof"
+        android:label="FragmentDisplayRoof"
+        tools:layout="@layout/fragment_display_roof"/>
+    <fragment
+        android:id="@+id/fragmentLight"
+        android:name="com.example.busadminui.FragmentLight"
+        android:label="FragmentLight"
+        tools:layout="@layout/fragment_light"/>
+    <fragment
+        android:id="@+id/fragmentTable"
+        android:name="com.example.busadminui.FragmentTable"
+        android:label="FragmentTable"
+        tools:layout="@layout/fragment_table"/>
+</navigation>

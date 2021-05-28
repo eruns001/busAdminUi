@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGroundMain">
+
+
+    <ImageView
+        android:id="@+id/background_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_light_horizontal_1st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_light_horizontal_2st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_light_horizontal_3st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_light_vertical_1st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <ImageButton
+        android:id="@+id/btn_light_spotLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_light_spotlight"
+        app:layout_constraintTop_toTopOf="@+id/background_light"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_1st"
+        app:layout_constraintLeft_toLeftOf="@+id/background_light"
+        app:layout_constraintRight_toLeftOf="@id/guideline_light_vertical_1st"/>
+    <ImageButton
+        android:id="@+id/btn_light_roundLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_light_roundlight"
+        app:layout_constraintTop_toTopOf="@+id/background_light"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_1st"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_light_vertical_1st"
+        app:layout_constraintRight_toRightOf="@id/background_light"/>
+    <ImageButton
+        android:id="@+id/btn_light_ambientLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_light_ambientlight"
+        app:layout_constraintTop_toTopOf="@+id/guideline_light_horizontal_1st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_2st"
+        app:layout_constraintLeft_toLeftOf="@+id/background_light"
+        app:layout_constraintRight_toLeftOf="@id/guideline_light_vertical_1st"/>
+
+    <ImageButton
+        android:id="@+id/btn_light_furnitureLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_light_furniturelight"
+        app:layout_constraintTop_toTopOf="@+id/guideline_light_horizontal_1st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_2st"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_light_vertical_1st"
+        app:layout_constraintRight_toRightOf="@id/background_light"/>
+    <ImageView
+        android:id="@+id/view_light_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_light_round"
+        app:layout_constraintTop_toBottomOf="@id/guideline_light_horizontal_2st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_3st"
+        app:layout_constraintLeft_toLeftOf="@id/background_light"
+        app:layout_constraintRight_toRightOf="@id/background_light"/>
+    <ImageView
+        android:id="@+id/view_light_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_light_spot"
+        app:layout_constraintTop_toBottomOf="@id/guideline_light_horizontal_2st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_3st"
+        app:layout_constraintLeft_toLeftOf="@id/background_light"
+        app:layout_constraintRight_toRightOf="@id/background_light"/>
+    <ImageView
+        android:id="@+id/view_light_ambient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/view_light_ambient"
+        app:layout_constraintTop_toBottomOf="@id/guideline_light_horizontal_2st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_light_horizontal_3st"
+        app:layout_constraintLeft_toLeftOf="@id/background_light"
+        app:layout_constraintRight_toRightOf="@id/background_light"/>
+    <Button
+        android:id="@+id/btn_light_ambientColor"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="@color/backGround1deep"
+        android:text="Ambient Color"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/guideline_light_horizontal_3st"
+        app:layout_constraintBottom_toBottomOf="@id/background_light"
+        app:layout_constraintLeft_toLeftOf="@id/background_light"
+        app:layout_constraintRight_toLeftOf="@id/guideline_light_vertical_1st"/>
+
+    <Button
+        android:id="@+id/btn_light_roundColor"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="@color/backGround1deep"
+        android:text="Round Color"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/background_light"
+        app:layout_constraintLeft_toRightOf="@id/guideline_light_vertical_1st"
+        app:layout_constraintRight_toRightOf="@id/background_light"
+        app:layout_constraintTop_toBottomOf="@id/guideline_light_horizontal_3st" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

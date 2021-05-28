@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGroundMain">
+
+    <ImageView
+        android:id="@+id/background_ac"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_ac"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ac_horizontal_1st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ac_horizontal_2st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ac_vertical_1st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_ac_ac"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toTopOf="@id/background_ac"
+        app:layout_constraintLeft_toLeftOf="@id/background_ac"/>
+
+    <com.triggertrap.seekarc.SeekArc
+        android:id="@+id/seekArk_ac"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="20dp"
+        android:padding="35dp"
+        android:rotation="-135"
+        app:arcColor="@color/arcColor"
+        app:arcWidth="10dp"
+        app:progressWidth="10dp"
+        app:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_ac_horizontal_1st"
+        app:layout_constraintLeft_toLeftOf="@+id/background_ac"
+        app:layout_constraintRight_toRightOf="@id/background_ac"
+        app:layout_constraintTop_toTopOf="@id/background_ac"
+        app:layout_constraintVertical_bias="0.615"
+        app:progress="22"
+        app:progressColor="@color/progressColor"
+        app:startAngle="0"
+        app:sweepAngle="270"
+        app:touchInside="false" />
+
+    <ImageView
+        android:id="@+id/tempSeekArk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/seekark"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/background_ac"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_ac_horizontal_1st"
+        app:layout_constraintLeft_toLeftOf="@+id/background_ac"
+        app:layout_constraintRight_toRightOf="@id/background_ac"/>
+    <TextView
+        android:id="@+id/textView_ac_temp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:text="18°C"
+        app:layout_constraintTop_toTopOf="@+id/seekArk_ac"
+        app:layout_constraintBottom_toBottomOf="@id/seekArk_ac"
+        app:layout_constraintLeft_toLeftOf="@id/seekArk_ac"
+        app:layout_constraintRight_toRightOf="@id/seekArk_ac"/>
+    <ImageButton
+        android:id="@+id/btn_ac_onoff"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_onoff_off"
+        app:layout_constraintTop_toBottomOf="@id/guideline_ac_horizontal_1st"
+        app:layout_constraintBottom_toTopOf="@id/guideline_ac_horizontal_2st"
+        app:layout_constraintLeft_toLeftOf="@+id/background_ac"
+        app:layout_constraintRight_toRightOf="@id/background_ac"/>
+    <ImageButton
+        android:id="@+id/btn_ac_minus"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_minus"
+        app:layout_constraintTop_toBottomOf="@id/guideline_ac_horizontal_2st"
+        app:layout_constraintBottom_toBottomOf="@+id/background_ac"
+        app:layout_constraintLeft_toLeftOf="@id/background_ac"
+        app:layout_constraintRight_toLeftOf="@id/guideline_ac_vertical_1st"/>
+    <ImageButton
+        android:id="@+id/btn_ac_plus"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/backGround1deep"
+        android:src="@drawable/btn_plus"
+        app:layout_constraintTop_toBottomOf="@id/guideline_ac_horizontal_2st"
+        app:layout_constraintBottom_toBottomOf="@id/background_ac"
+        app:layout_constraintLeft_toRightOf="@id/guideline_ac_vertical_1st"
+        app:layout_constraintRight_toRightOf="@id/background_ac"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
